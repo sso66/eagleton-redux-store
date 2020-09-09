@@ -29,7 +29,7 @@ class App extends React.Component {
         <div style={{ 'backgroundColor': 'orange' } }>
           <h2>Eagleton Redux Store</h2>
           <h3>What is your favorite front-end development in 2020</h3>
-          <h4>Click on the logos below to vote</h4>
+          <h4>Click on the buttons below to vote</h4>
           <hr />
           <div className='row'>
             <div className='col'>
