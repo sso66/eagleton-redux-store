@@ -1,5 +1,7 @@
+// File: results.sx
+// Date: 9/9/2020
+// Note: Redux states 
 import React from 'react';
-
 
 console.log('Mounting results.js...\n');
 
@@ -32,6 +34,7 @@ class Results extends React.Component {
             return 0
         }
     }
+
     votesVueInPercent() {
         if (this.store.getState().vue) {
             return (
@@ -47,34 +50,33 @@ class Results extends React.Component {
 
     votesAngularInPercentStyle() {
         return {
-            width: this.votesAngularInPercent()+'%'
+            width: this.votesAngularInPercent() + '%'
         }
     }
 
     votesReactInPercentStyle() {
         return {
-            width: this.votesReactInPercent()+'%'
+            width: this.votesReactInPercent() + '%'
         }
     }
     votesVueInPercentStyle() {
         return {
-            width: this.votesVueInPercent()+'%'
+            width: this.votesVueInPercent() + '%'
         }
     }
 
-    render() {
-        
+    render() {     
         return (
             <div className='results'>
                 <span>Angular:</span>
                 <div>{this.votesAngularInPercent().toFixed(2) + '%'}</div>
-                <div className='progress-bar-danger' style={this.votesAngularInPercentStyle()}></div>
+                <div className='progress progress-bar-danger' style={this.votesAngularInPercentStyle()}></div>
                 <span>React:</span>
                 <div>{this.votesReactInPercent().toFixed(2) + '%'}</div>
-                <div className='progress-bar-info' style={this.votesReactInPercentStyle()}></div>
+                <div className='progress progress-bar-info' style={this.votesReactInPercentStyle()}></div>
                 <span>Vue:</span>
                 <div>{this.votesVueInPercent().toFixed(2) + '%'}</div>
-                <div className='progress-bar-success' style={this.votesVueInPercentStyle()}></div>
+                <div className='progress progress-bar-success' style={this.votesVueInPercentStyle()}></div>
             </div>
         )
     }

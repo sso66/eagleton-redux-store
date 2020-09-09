@@ -1,4 +1,6 @@
-
+// File: index.jsx
+// Date: 9/9/2020
+// Note: Redux Actions
 console.log('Mounting actions.js...\n');
 
 export const voteAngular = () => {

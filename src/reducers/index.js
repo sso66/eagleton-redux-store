@@ -1,4 +1,6 @@
-
+// File: index.jsx
+// Date: 9/9/2020
+// Note: Redux reducers
 console.log('Mounting reducers.js...\n');
 
 const initialState = {
