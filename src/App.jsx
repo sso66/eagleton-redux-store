@@ -1,9 +1,11 @@
 // File: App.jsx
 // Date: 9/9/2020
-// Note: Application entry point
+// Note: React Application Component
+//................................................................................
 import React from 'react';
 import './App.sass';
-import { voteAngular, voteReact, voteVue } from './actions';
+import { voteAngular, voteReact, voteVue } from './actions/requests';
+import Results from './components/results'
 
 console.log('Mounting App.js...\n');
 
@@ -33,7 +35,7 @@ class App extends React.Component {
           <h3>What is your favorite front-end development in 2020</h3>
           <h4>Click on the buttons below to vote</h4>
           <hr />
-          <div className='votes'>
+          <div className='requests'>
             <div className='col'>
               <button onClick={this.handleVoteAngular}>Angular</button>
             </div>
@@ -43,6 +45,8 @@ class App extends React.Component {
             <div className='col'>
               <button onClick={this.handleVoteVue}>Vue</button>
             </div>
+            <hr />
+            <Results store={this.props.store} />
           </div>
         </div>
       </div>

@@ -1,9 +1,11 @@
-// File: results.sx
+// File: components/results.sx
 // Date: 9/9/2020
-// Note: Redux states 
+// Note: React Voting Results Component
+//................................................................................ 
 import React from 'react';
+import './results.sass';
 
-console.log('Mounting results.js...\n');
+console.log('Mounting components/results.js...\n');
 
 class Results extends React.Component {
     constructor(props) {
@@ -70,13 +72,21 @@ class Results extends React.Component {
             <div className='results'>
                 <span>Angular:</span>
                 <div>{this.votesAngularInPercent().toFixed(2) + '%'}</div>
-                <div className='progress progress-bar-danger' style={this.votesAngularInPercentStyle()}></div>
+                <div className='progress-container'>
+                    <div className='progress progress-bar-danger' style={this.votesAngularInPercentStyle()}></div>
+                </div>
+
                 <span>React:</span>
                 <div>{this.votesReactInPercent().toFixed(2) + '%'}</div>
-                <div className='progress progress-bar-info' style={this.votesReactInPercentStyle()}></div>
+                <div className='progress-container'>
+                    <div className='progress progress-bar-info' style={this.votesReactInPercentStyle()}></div>
+                </div>
+                
                 <span>Vue:</span>
                 <div>{this.votesVueInPercent().toFixed(2) + '%'}</div>
-                <div className='progress progress-bar-success' style={this.votesVueInPercentStyle()}></div>
+                <div className='progress-container'>
+                    <div className='progress progress-bar-success' style={this.votesVueInPercentStyle()}></div>
+                </div>
             </div>
         )
     }
