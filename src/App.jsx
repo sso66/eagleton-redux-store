@@ -7,7 +7,7 @@ import './App.sass';
 import { voteAngular, voteReact, voteVue } from './actions/requests';
 import Results from './components/results'
 
-console.log('Mounting App.js...\n');
+console.log('Mounting src/App.js...\n');
 
 class App extends React.Component {
   constructor(props) {

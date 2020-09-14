@@ -3,7 +3,6 @@
 // Note: Redux Store: Predictable State Management Container
 //................................................................................
 import { createStore } from 'redux';
-
 console.log('Mounting store.js...\n');
 
 const reducer = (state, action) => state;

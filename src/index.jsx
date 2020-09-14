@@ -7,13 +7,14 @@ import ReactDOM from 'react-dom';
 import './index.sass';
 import App from './App';
 
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import reducer from './reducers/root';
+import logMiddleware from './middleware/logMiddleware';
 
 console.log('Mounting index.jsx...\n');
 
 // ___ create a Redux store ___
-let store = createStore(reducer);
+let store = createStore(reducer, applyMiddleware(logMiddleware));
 
 function render() {
   ReactDOM.render(

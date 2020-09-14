@@ -1,4 +1,3 @@
-import { act } from 'react-dom/test-utils';
 // File: requests.jsx
 // Date: 9/9/2020
 // Note: Redux Action Creators for vote types
